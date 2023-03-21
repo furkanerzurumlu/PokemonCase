@@ -56,15 +56,31 @@
 		DC498CF129CA2DD000626138 /* PokemonCase */ = {
 			isa = PBXGroup;
 			children = (
-				DC498CF229CA2DD000626138 /* AppDelegate.swift */,
-				DC498CF429CA2DD000626138 /* SceneDelegate.swift */,
-				DC498CF629CA2DD000626138 /* ViewController.swift */,
-				DC498CF829CA2DD000626138 /* Main.storyboard */,
-				DC498CFB29CA2DD200626138 /* Assets.xcassets */,
-				DC498CFD29CA2DD200626138 /* LaunchScreen.storyboard */,
+				DC498D0729CA308D00626138 /* Other */,
+				DC498D0629CA307B00626138 /* UI */,
 				DC498D0029CA2DD200626138 /* Info.plist */,
 			);
 			path = PokemonCase;
+			sourceTree = "<group>";
+		};
+		DC498D0629CA307B00626138 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DC498CF829CA2DD000626138 /* Main.storyboard */,
+				DC498CF629CA2DD000626138 /* ViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DC498D0729CA308D00626138 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DC498CF229CA2DD000626138 /* AppDelegate.swift */,
+				DC498CF429CA2DD000626138 /* SceneDelegate.swift */,
+				DC498CFB29CA2DD200626138 /* Assets.xcassets */,
+				DC498CFD29CA2DD200626138 /* LaunchScreen.storyboard */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +306,7 @@
 				DEVELOPMENT_TEAM = NVN42XWXC5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PokemonCase/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pokemon;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +335,7 @@
 				DEVELOPMENT_TEAM = NVN42XWXC5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PokemonCase/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pokemon;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
