@@ -13,6 +13,14 @@
 		DC498CFA29CA2DD000626138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC498CF829CA2DD000626138 /* Main.storyboard */; };
 		DC498CFC29CA2DD200626138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC498CFB29CA2DD200626138 /* Assets.xcassets */; };
 		DC498CFF29CA2DD200626138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC498CFD29CA2DD200626138 /* LaunchScreen.storyboard */; };
+		DC498D0B29CB773F00626138 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC498D0929CB773F00626138 /* PokemonTableViewCell.swift */; };
+		DC498D0C29CB773F00626138 /* PokemonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC498D0A29CB773F00626138 /* PokemonTableViewCell.xib */; };
+		DC498D0F29CBA66200626138 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC498D0E29CBA66200626138 /* UIViewController-Extension.swift */; };
+		DC498D1429CBA6F200626138 /* PokemonNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC498D1329CBA6F200626138 /* PokemonNetworking.swift */; };
+		DC498D1729CBA73300626138 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DC498D1629CBA73300626138 /* Alamofire */; };
+		DC498D1C29CBA9F400626138 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC498D1B29CBA9F400626138 /* MainVM.swift */; };
+		DC498D1E29CBCA2900626138 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC498D1D29CBCA2900626138 /* Pokemon.swift */; };
+		DC498D2029CBD1FA00626138 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC498D1F29CBD1FA00626138 /* AppModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,13 @@
 		DC498CFB29CA2DD200626138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC498CFE29CA2DD200626138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC498D0029CA2DD200626138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC498D0929CB773F00626138 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
+		DC498D0A29CB773F00626138 /* PokemonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonTableViewCell.xib; sourceTree = "<group>"; };
+		DC498D0E29CBA66200626138 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
+		DC498D1329CBA6F200626138 /* PokemonNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonNetworking.swift; sourceTree = "<group>"; };
+		DC498D1B29CBA9F400626138 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		DC498D1D29CBCA2900626138 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		DC498D1F29CBD1FA00626138 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC498D1729CBA73300626138 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +72,13 @@
 		DC498CF129CA2DD000626138 /* PokemonCase */ = {
 			isa = PBXGroup;
 			children = (
-				DC498D0729CA308D00626138 /* Other */,
+				DC498D1829CBA81300626138 /* Model */,
+				DC498D1029CBA6B700626138 /* Service */,
+				DC498D0D29CBA64900626138 /* Extensions */,
 				DC498D0629CA307B00626138 /* UI */,
+				DC498D0729CA308D00626138 /* Other */,
 				DC498D0029CA2DD200626138 /* Info.plist */,
+				DC498D1F29CBD1FA00626138 /* AppModule.swift */,
 			);
 			path = PokemonCase;
 			sourceTree = "<group>";
@@ -66,8 +86,10 @@
 		DC498D0629CA307B00626138 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DC498D0829CB76EB00626138 /* PokemonTableViewCell */,
 				DC498CF829CA2DD000626138 /* Main.storyboard */,
 				DC498CF629CA2DD000626138 /* ViewController.swift */,
+				DC498D1B29CBA9F400626138 /* MainVM.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -81,6 +103,39 @@
 				DC498CFD29CA2DD200626138 /* LaunchScreen.storyboard */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		DC498D0829CB76EB00626138 /* PokemonTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC498D0929CB773F00626138 /* PokemonTableViewCell.swift */,
+				DC498D0A29CB773F00626138 /* PokemonTableViewCell.xib */,
+			);
+			path = PokemonTableViewCell;
+			sourceTree = "<group>";
+		};
+		DC498D0D29CBA64900626138 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC498D0E29CBA66200626138 /* UIViewController-Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DC498D1029CBA6B700626138 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DC498D1329CBA6F200626138 /* PokemonNetworking.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DC498D1829CBA81300626138 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC498D1D29CBCA2900626138 /* Pokemon.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +154,9 @@
 			dependencies = (
 			);
 			name = PokemonCase;
+			packageProductDependencies = (
+				DC498D1629CBA73300626138 /* Alamofire */,
+			);
 			productName = PokemonCase;
 			productReference = DC498CEF29CA2DD000626138 /* PokemonCase.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +185,9 @@
 				Base,
 			);
 			mainGroup = DC498CE629CA2DD000626138;
+			packageReferences = (
+				DC498D1529CBA73300626138 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = DC498CF029CA2DD000626138 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC498CFF29CA2DD200626138 /* LaunchScreen.storyboard in Resources */,
+				DC498D0C29CB773F00626138 /* PokemonTableViewCell.xib in Resources */,
 				DC498CFC29CA2DD200626138 /* Assets.xcassets in Resources */,
 				DC498CFA29CA2DD000626138 /* Main.storyboard in Resources */,
 			);
@@ -155,8 +217,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC498CF729CA2DD000626138 /* ViewController.swift in Sources */,
+				DC498D1E29CBCA2900626138 /* Pokemon.swift in Sources */,
+				DC498D1429CBA6F200626138 /* PokemonNetworking.swift in Sources */,
+				DC498D0B29CB773F00626138 /* PokemonTableViewCell.swift in Sources */,
+				DC498D0F29CBA66200626138 /* UIViewController-Extension.swift in Sources */,
 				DC498CF329CA2DD000626138 /* AppDelegate.swift in Sources */,
 				DC498CF529CA2DD000626138 /* SceneDelegate.swift in Sources */,
+				DC498D1C29CBA9F400626138 /* MainVM.swift in Sources */,
+				DC498D2029CBD1FA00626138 /* AppModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +444,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC498D1529CBA73300626138 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC498D1629CBA73300626138 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC498D1529CBA73300626138 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC498CE729CA2DD000626138 /* Project object */;
 }
